@@ -19,8 +19,8 @@ public class WorkerService {
 		return repository.findAll();
 	}
 
-	public Optional<Worker> findById(Long id) {
-		final var obj = repository.findById(id);
+	public Worker findById(Long id) {
+		Worker obj = repository.findById(id).get();
 		return obj;
 	}
 }

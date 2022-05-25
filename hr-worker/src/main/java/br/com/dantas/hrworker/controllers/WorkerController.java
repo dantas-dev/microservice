@@ -28,9 +28,9 @@ public class WorkerController {
 	}
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Optional<Worker>> findById(@PathVariable Long id) {
+	public ResponseEntity<Worker> findById(@PathVariable Long id) {
 		final var obj = service.findById(id);
-		return ResponseEntity.status(HttpStatus.NO_CONTENT).body(obj);
+		return ResponseEntity.ok(obj);
 	}
 
 }
